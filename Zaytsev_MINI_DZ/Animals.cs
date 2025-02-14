@@ -8,7 +8,7 @@
         { }
     }
 
-    // Конкретный класс обезьяны – травоядное животное.
+    // Класс обезьяны – травоядное животное.
     public class Monkey : Herbo
     {
         public Monkey(string name, int food, int number, int kindness)
@@ -16,7 +16,7 @@
         { }
     }
 
-    // Конкретный класс тигра – хищное животное.
+    // Класс тигра – хищное животное.
     public class Tiger : Predator
     {
         public Tiger(string name, int food, int number)
@@ -24,7 +24,7 @@
         { }
     }
 
-    // Конкретный класс волка – хищное животное.
+    // Класс волка – хищное животное.
     public class Wolf : Predator
     {
         public Wolf(string name, int food, int number)

@@ -1,6 +1,6 @@
 ﻿namespace Zaytsev_MINI_DZ
 {
-    // Интерфейс зоопарка, управляющего животными и инвентаризационными вещами.
+    // Интерфейс зоопарка для управления всем.
     public interface IZoo
     {
         void AddAnimal(Animal animal);
@@ -11,7 +11,7 @@
         void AddInventoryItem(IInventory item);
     }
 
-    // Класс зоопарка – управляет списками животных и инвентаризационными вещами.
+    // Класс зоопарка.
     public class Zoo : IZoo
     {
         private readonly List<Animal> _animals = new List<Animal>();
@@ -22,10 +22,10 @@
             _animals.Add(animal);
         }
 
-        // Подсчет общего количества потребляемой еды всеми животными.
+        // Общее кол-вот потребляемой еды.
         public int GetTotalFoodConsumption() => _animals.Sum(a => a.Food);
 
-        // Выборка животных, подходящих для контактного зоопарка (только травоядные с добротой > 5).
+        // Животные для контактного зоопарка.
         public IEnumerable<Animal> GetInteractiveAnimals()
         {
             return _animals.Where(a => a is Herbo herbo && herbo.CanInteract());

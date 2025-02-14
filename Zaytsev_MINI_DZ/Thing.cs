@@ -1,6 +1,6 @@
 ﻿namespace Zaytsev_MINI_DZ
 {
-    // Базовый класс для инвентаризационных вещей.
+    // Класс для вещей.
     public class Thing : IInventory
     {
         public string Name { get; set; }

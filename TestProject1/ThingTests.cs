@@ -8,11 +8,9 @@ namespace Zaytsev_MINI_DZ.Tests
         [Fact]
         public void CreateThing_ShouldHaveCorrectProperties()
         {
-            // Arrange
             var table = new Table("Office Table", 301);
             var computer = new Computer("Dell PC", 302);
 
-            // Act & Assert
             Assert.Equal("Office Table", table.Name);
             Assert.Equal(301, table.Number);
 

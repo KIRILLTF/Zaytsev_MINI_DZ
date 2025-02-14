@@ -1,12 +1,12 @@
 ﻿namespace Zaytsev_MINI_DZ
 {
-    // Интерфейс ветеринарной клиники.
+    // Интерфейс вет клиники.
     public interface IVeterinaryClinic
     {
         bool CheckHealth(Animal animal);
     }
 
-    // Класс ветеринарной клиники для проверки состояния здоровья животных.
+    // Класс вет клиники для проверки здоровья животных.
     public class VeterinaryClinic : IVeterinaryClinic
     {
         public bool CheckHealth(Animal animal)

@@ -11,7 +11,6 @@ namespace Zaytsev_MINI_DZ.Tests
         [Fact]
         public void CheckHealth_ShouldReturnTrue_WhenAnimalIsHealthy()
         {
-            // Arrange
             var clinic = new VeterinaryClinic();
             var animal = new Rabbit("Bunny", 1, 1, 8);
 
@@ -19,10 +18,8 @@ namespace Zaytsev_MINI_DZ.Tests
             {
                 Console.SetIn(sr);
 
-                // Act
                 bool result = clinic.CheckHealth(animal);
 
-                // Assert
                 Assert.True(result);
             }
         }
@@ -30,18 +27,15 @@ namespace Zaytsev_MINI_DZ.Tests
         [Fact]
         public void CheckHealth_ShouldReturnFalse_WhenAnimalIsUnhealthy()
         {
-            // Arrange
             var clinic = new VeterinaryClinic();
             var animal = new Rabbit("Bunny", 1, 1, 8);
 
             using (var sr = new StringReader("не здоров\n"))
             {
                 Console.SetIn(sr);
-
-                // Act
+                
                 bool result = clinic.CheckHealth(animal);
 
-                // Assert
                 Assert.False(result);
             }
         }
@@ -49,7 +43,6 @@ namespace Zaytsev_MINI_DZ.Tests
         [Fact]
         public void CheckHealth_ShouldThrowException_WhenInputIsInvalid()
         {
-            // Arrange
             var clinic = new VeterinaryClinic();
             var animal = new Rabbit("Bunny", 1, 1, 8);
 
@@ -57,7 +50,6 @@ namespace Zaytsev_MINI_DZ.Tests
             {
                 Console.SetIn(sr);
 
-                // Act & Assert
                 Assert.Throws<Exception>(() => clinic.CheckHealth(animal));
             }
         }
